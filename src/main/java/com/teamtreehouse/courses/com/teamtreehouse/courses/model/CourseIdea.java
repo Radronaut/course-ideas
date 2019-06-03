@@ -2,9 +2,7 @@ package com.teamtreehouse.courses.com.teamtreehouse.courses.model;
 
 import com.github.slugify.Slugify;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class CourseIdea {
 
@@ -35,6 +33,9 @@ public class CourseIdea {
         return voters.add(voterUserName);
     }
 
+    public List<String> getVoters() {
+        return new ArrayList<>(voters);
+    }
     public int getVoteCount() {
         return voters.size();
     }
